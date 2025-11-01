@@ -38,7 +38,7 @@ async function nurSyncLearningBot(prompt) {
 }
 
 app.use(session({
-	secret: process.env.SECRETKEY,
+	secret: process.env.SECRET_KEY,
 	resave: false,
 	saveUninitialized: true
 }));
