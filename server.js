@@ -10,7 +10,6 @@ const app = express();
 
 const PORT = process.env.PORT || 10000;
 
-
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
@@ -37,6 +36,8 @@ async function nurSyncLearningBot(prompt) {
 	}
 }
 
+//Backend part
+
 app.use(session({
 	secret: process.env.SECRET_KEY,
 	resave: false,
@@ -44,7 +45,7 @@ app.use(session({
 }));
 
 app.use(cors({
-	origin: ['https://nursync.vercel.app', 'http://localhost:3000'],
+	origin: ['https://nursync.onrender.com', 'http://localhost:3000'],
 	credentials: true
 }));
 

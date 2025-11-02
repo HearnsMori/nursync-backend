@@ -52,8 +52,8 @@ const login = async (req, res) => {
 				return res.status(200).json({'error': 'Password doesn\'t match the account.'});	
 			}
 			//creates jwt
-			const token2 = jwt.sign({userId: username2Exist.username}, process.env.SECRETKEY, {expiresIn: '1h'});
-			const token3 = jwt.sign({userId: username2Exist.username}, process.env.SECRETKEY, {expiresIn: '11d'});
+			const token2 = jwt.sign({userId: username2Exist.username}, process.env.SECRET_KEY, {expiresIn: '1h'});
+			const token3 = jwt.sign({userId: username2Exist.username}, process.env.SECRET_KEY, {expiresIn: '11d'});
 			//sucess login
 			res.status(200).json({'token': token2, 'refreshToken': token3});
 		} else {
