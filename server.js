@@ -45,7 +45,7 @@ app.use(session({
 }));
 
 app.use(cors({
-	origin: ['https://nursync.onrender.com', 'http://localhost:3000'],
+	origin: ['https://nursync.onrender.com', 'https://nursync.vercel.app', 'http://localhost:3000'],
 	credentials: true
 }));
 
